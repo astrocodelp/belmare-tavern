@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "title": "BelMare Tavern Dafni Beach Zakynthos - Zante Tavern",
+    "description": "A tavern in Dafni Beach Zakynthos with delicious food and great view."
+  },
+  "nav": {
+    "home": "HOMEPAGE",
+    "about": "THE TAVERN",
+    "menu": "MENU",
+    "gallery": "GALLERY",
+    "contact": "CONTACT",
+    "languageSwitch": "ΕΛΛΗΝΙΚΑ"
+  },
+  "hero": {
+    "slide1": {
+      "subtitle": "WELCOME",
+      "title": "TO BEL MARE",
+      "description": "One of the favourites taverns in Zakynthos with view of the beautiful Dafni Beach."
+    },
+    "slide2": {
+      "subtitle": "Delicious",
+      "title": "Fresh fish",
+      "description": "From the Ionian Sea."
+    },
+    "slide3": {
+      "subtitle": "Fantastic",
+      "title": "Greek Cuisine",
+      "description": "With traditional recipes and fresh ingredients."
+    }
+  },
+  "about": {
+    "subtitle": "Discover",
+    "title": "BelMare",
+    "description": "In Dafni Beach, by the seaside, you can find Bel Mare, well-known for its greek specialties, fresh delicacies and delicious cooking. In the kitchen you will find Dina cooking, using only local ingredients, fresh fish and virgin olive oil. A choice that you will recommend to friends and family."
+  },
+  "features": {
+    "feature1": {
+      "title": "Greek",
+      "subtitle": "Cuisine"
+    },
+    "feature2": {
+      "title": "Fish",
+      "subtitle": "Freshly Caught"
+    },
+    "feature3": {
+      "title": "Refreshing",
+      "subtitle": "Cocktails"
+    },
+    "feature4": {
+      "title": "By the",
+      "subtitle": "Seaside"
+    }
+  },
+  "menu": {
+    "subtitle": "Discover",
+    "title": "OUR MENU",
+    "categories": {
+      "coldAppetizers": "Cold Appetizers",
+      "hotAppetizers": "Hot Appetizers",
+      "salads": "Salads",
+      "seafood": "Seafood",
+      "grilled": "Grilled",
+      "homeCooked": "Homecooked"
+    },
+    "items": {
+      "coldAppetizers": [
+        "Tzatziki",
+        "Potato salad",
+        "Octopus with vinegar",
+        "Marinated Anchovies",
+        "Skordalia",
+        "Bruschetta",
+        "Bruschetta Skordostoubi",
+        "Garlic bread"
+      ],
+      "hotAppetizers": [
+        "French Fries",
+        "Fried Calamari",
+        "Cheese pies",
+        "Zucchini balls",
+        "Grilled feta",
+        "Saganaki",
+        "Fried eggplant",
+        "Fried zucchini",
+        "Local cheese",
+        "Saganaki shrimps",
+        "Mussels"
+      ],
+      "salads": [
+        "Greek salad",
+        "Tomato, cucumber salad",
+        "Tomato salad",
+        "Cucumber salad",
+        "Season salad",
+        "Crab salad",
+        "Tuna salad",
+        "Chef salad",
+        "Greens salad",
+        "Bel Mare"
+      ],
+      "seafood": [
+        "Fried cod",
+        "Spaghetti with shrimps",
+        "Fish soup",
+        "Fresh fish",
+        "Sardine",
+        "Grilled anchovy",
+        "Anchovy",
+        "Mussels",
+        "Smelt",
+        "Grilled calamari",
+        "Grilled shrimps",
+        "Grilled octopus"
+      ],
+      "grilled": [
+        "Beefsteak",
+        "Pork chop",
+        "Pork souvlaki",
+        "Chicken souvlaki",
+        "\"Dinas'\" meat patty",
+        "Chicken fillet",
+        "Traditional sausage",
+        "Pork belly",
+        "Lamb ribs",
+        "Goat ribs"
+      ],
+      "homeCooked": [
+        "Briam",
+        "Pastitsio",
+        "Moussaka",
+        "Chicken in the oven",
+        "Gemista",
+        "Rabbit",
+        "Chicken cooked in tomato sauce",
+        "Beef cooked in tomato sauce",
+        "Eggplants skordostoubi",
+        "Green beans",
+        "Gigantes in the oven"
+      ]
+    }
+  },
+  "gallery": {
+    "title": "Gallery"
+  },
+  "contact": {
+    "title": "Contact",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Name",
+      "email": "Email",
+      "emailPlaceholder": "Email",
+      "message": "Message",
+      "messagePlaceholder": "Write your message",
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Thank You! Your message has been sent.",
+      "error": "Oops! Something went wrong. Please try again."
+    },
+    "info": {
+      "title": "Contact info",
+      "phone": "697 401 0136",
+      "email": "belmaretavern@gmail.com",
+      "address": "Dafni Beach, Zakynthos 291 00, Greece"
+    },
+    "hours": {
+      "title": "Working hours",
+      "schedule": "Monday - Sunday",
+      "time": "9.00 am to 11:50 pm"
+    }
+  },
+  "footer": {
+    "copyright": "Copyright"
+  }
+}
