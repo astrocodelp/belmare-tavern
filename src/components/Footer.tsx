@@ -11,14 +11,14 @@ export default function Footer() {
             <div className="mu-footer-area">
               <div className="mu-footer-social">
                 <a
-                  href="https://www.facebook.com/people/BelMare-Dafni-Beach/100084849824977/"
+                  href="https://www.facebook.com/belmaretavern"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span className="fa fa-facebook"></span>
                 </a>
                 <a
-                  href="https://www.instagram.com/explore/locations/1163437757040170/bel-mare-dafni-beach/?hl=en"
+                  href="https://www.instagram.com/belmaretavern/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
