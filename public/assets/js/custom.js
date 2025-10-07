@@ -43,13 +43,18 @@ jQuery(function ($) {
   /*  2. PORTFOLIO POPUP VIEW ( IMAGE LIGHTBOX )
   /* ----------------------------------------------------------- */
 
-  $(".mu-imglink").magnificPopup({
-    type: "image",
-    mainClass: "mfp-fade",
-    gallery: {
-      enabled: true,
-    },
-  });
+  // Check if Magnific Popup is available before using it
+  if (typeof $.fn.magnificPopup !== "undefined") {
+    $(".mu-imglink").magnificPopup({
+      type: "image",
+      mainClass: "mfp-fade",
+      gallery: {
+        enabled: true,
+      },
+    });
+  } else {
+    console.warn("Magnific Popup not loaded, skipping lightbox initialization");
+  }
 
   /* ----------------------------------------------------------- */
   /*  3. DATEPICKER
@@ -152,18 +157,11 @@ jQuery(function ($) {
     });
 
   // Bind click handler to menu items
-  // so we can get a fancy scroll animation
+  // Use CSS smooth scroll instead of jQuery animation for better performance
   menuItems.click(function (e) {
-    var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 32;
-    jQuery("html, body").stop().animate(
-      {
-        scrollTop: offsetTop,
-      },
-      1500,
-    );
+    // Just close the mobile menu, let CSS handle the smooth scrolling
     jQuery(".navbar-collapse").removeClass("in");
-    e.preventDefault();
+    // Don't prevent default - let the browser handle the smooth scroll
   });
 
   // Bind to scroll

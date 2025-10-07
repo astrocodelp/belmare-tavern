@@ -64,9 +64,33 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Smooth scroll behavior */
+/* Smooth scroll behavior - optimized for performance */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed header */
+}
+
+/* Enhanced smooth scroll for menu items */
+.mu-main-nav a[href^='#'] {
+  scroll-behavior: smooth;
+}
+
+/* Optimize scroll performance */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Faster scroll timing for better UX */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  /* Ensure all anchor links use smooth scroll */
+  a[href^='#'] {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Fix navbar collapse on mobile */
