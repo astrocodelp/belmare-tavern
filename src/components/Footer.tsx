@@ -35,14 +35,14 @@ export default function Footer() {
                   >
                     ormosagency.gr
                   </a>
-                  . All right reserved.
+                  . All rights reserved.
                 </p>
                 <p>
-                  Powered by rel="nofollow"
+                  Powered by{" "}
                   <a
                     href="https://astrocode.gr"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer nofollow"
                   >
                     astrocode.gr
                   </a>
