@@ -149,12 +149,23 @@
       "namePlaceholder": "Name",
       "email": "Email",
       "emailPlaceholder": "Email",
+      "phone": "Phone",
+      "phoneOptional": "(optional)",
+      "phonePlaceholder": "Your phone number",
       "message": "Message",
       "messagePlaceholder": "Write your message",
+      "required": "*",
       "submit": "Send",
       "sending": "Sending...",
       "success": "Thank You! Your message has been sent.",
-      "error": "Oops! Something went wrong. Please try again."
+      "error": "Oops! Something went wrong. Please try again.",
+      "errors": {
+        "nameRequired": "Name must be at least 2 characters long",
+        "emailRequired": "Please enter a valid email address",
+        "phoneInvalid": "Please enter a valid phone number",
+        "messageRequired": "Message must be at least 10 characters long",
+        "sendError": "Failed to send message. Please try again later."
+      }
     },
     "info": {
       "title": "Contact info",

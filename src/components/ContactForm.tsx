@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useActionState, useEffect, useRef } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 import {
   submitContactForm,
   type ContactFormState,
@@ -16,12 +16,34 @@ export default function ContactForm() {
     initialState,
   );
   const formRef = useRef<HTMLFormElement>(null);
+  
+  // Form state to preserve values on errors
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   useEffect(() => {
     if (state.success) {
-      formRef.current?.reset();
+      // Reset form data on success
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     }
   }, [state.success]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   return (
     <section id="mu-contact">
@@ -54,12 +76,16 @@ export default function ContactForm() {
                         className="mu-contact-form"
                       >
                         <div className="form-group">
-                          <label htmlFor="name">{t("form.name")}</label>
+                          <label htmlFor="name">
+                            {t("form.name")} <span style={{ color: "red" }}>{t("form.required")}</span>
+                          </label>
                           <input
                             type="text"
                             className="form-control"
                             id="name"
                             name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
                             placeholder={t("form.namePlaceholder")}
                             disabled={isPending}
                           />
@@ -71,12 +97,16 @@ export default function ContactForm() {
                         </div>
 
                         <div className="form-group">
-                          <label htmlFor="email">{t("form.email")}</label>
+                          <label htmlFor="email">
+                            {t("form.email")} <span style={{ color: "red" }}>{t("form.required")}</span>
+                          </label>
                           <input
                             type="email"
                             className="form-control"
                             id="email"
                             name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
                             placeholder={t("form.emailPlaceholder")}
                             disabled={isPending}
                           />
@@ -88,11 +118,36 @@ export default function ContactForm() {
                         </div>
 
                         <div className="form-group">
-                          <label htmlFor="message">{t("form.message")}</label>
+                          <label htmlFor="phone">
+                            {t("form.phone")} <span style={{ color: "#999" }}>{t("form.phoneOptional")}</span>
+                          </label>
+                          <input
+                            type="tel"
+                            className="form-control"
+                            id="phone"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            placeholder={t("form.phonePlaceholder")}
+                            disabled={isPending}
+                          />
+                          {state.errors?.phone && (
+                            <span className="text-danger">
+                              {state.errors.phone[0]}
+                            </span>
+                          )}
+                        </div>
+
+                        <div className="form-group">
+                          <label htmlFor="message">
+                            {t("form.message")} <span style={{ color: "red" }}>{t("form.required")}</span>
+                          </label>
                           <textarea
                             className="form-control"
                             id="message"
                             name="message"
+                            value={formData.message}
+                            onChange={handleInputChange}
                             cols={30}
                             rows={10}
                             placeholder={t("form.messagePlaceholder")}
